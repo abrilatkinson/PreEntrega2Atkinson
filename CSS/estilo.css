@@ -21,7 +21,7 @@
   
   
   
-  .footer { grid-area: footer; }
+  
   
 
   
@@ -249,16 +249,37 @@ text-align: center;
 /*Estilos del footer*/
 
 footer {
+    grid-area: footer;
     background-color:#FFC09C ;
     padding: 16px;
+    display: flex;
+    justify-content: space-between;
 }
 footer .logo{
-    padding: 10px;
+    padding: 5px;
     font-weight: bold;
+    
+    
+    
+}
+footer .menu{
+    list-style-type: none;
 }
 footer .logo img {
     width: 30px;
     padding-right: 5px;
+}
+
+footer .map {
+    padding: 5px;
+    margin: 5px;
+}
+footer .map iframe {
+    width: 180px;
+    height: 150px;
+}
+footer h4{
+    font-weight: none;
 }
  /*Estilos de instalacions*/
  nav .menu{
