@@ -167,6 +167,7 @@ text-align: center;
     scroll-snap-type: x mandatory;
     margin-left: 40px;
     margin-bottom: 5px;
+    background-color: #80604E;
  }
  main .imagenes .imgx{
   flex: 0 0 100%;
@@ -176,16 +177,20 @@ text-align: center;
  }
  main  p{
     margin: 20px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
  }
  
+ main .seccion2 .agrandar{
+    margin-top: 30px;
+ }
  main h2 {
     text-align: center;
     
  }
- main .seccion3 a{
+ main  a{
     text-decoration: none;
     transition: all 2s;
+    color: #FFC09C;
  }
 
  
@@ -241,11 +246,19 @@ text-align: center;
     font-weight: bolder;
 }
 
+/*Estilos del footer*/
 
 footer {
     background-color:#FFC09C ;
-    padding: 1rem;
-    
+    padding: 16px;
+}
+footer .logo{
+    padding: 10px;
+    font-weight: bold;
+}
+footer .logo img {
+    width: 30px;
+    padding-right: 5px;
 }
  /*Estilos de instalacions*/
  nav .menu{
