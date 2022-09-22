@@ -180,6 +180,17 @@ ul .nav-item a:hover{
         "footer";
     }
 }
+@media only screen and (max-width: 420px) { 
+    .padrer-fluid{
+        
+        grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+    }
+}
 
 /*Estilos del index*/
 .img{
