@@ -16,19 +16,19 @@
       "main aside"
       "footer footer";
   }
-  /*Grid de RESERVAS*/
+  /*Grid de INSTALACIONES, STAFF, RESERVAS Y CONTACTOS*/
   .padrer-fluid {  
-    display: grid;
-    grid-template-columns: 1.5fr 0.5fr;
-    grid-template-rows: 0.6fr 0.6fr 1.5fr 0.6fr;
-    grid-template-areas:
-      "header header"
-      "nav  nav"
-      "main aside"
-      "footer footer";
-  }
-  
-  
+      display: grid;
+        grid-template-columns: 1.5fr 0.5fr;
+        grid-template-rows: 0.3fr 0.3fr 1.5fr 1fr 0.6fr;
+        grid-template-areas:
+          "header header"
+          "nav nav"
+          "main aside"
+          "main aside"
+          "footer footer";
+      }
+      
   body {
     background-color: #80604E;
     color: black;
@@ -119,16 +119,14 @@ ul .nav-item {
     
     position: relative;
     font-size: 1rem;
-    text-align: center;
-    
-    
+    text-align: center;   
 }
 ul .nav-item a {
     color: black;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-    padding: 20px;
+    
     border-radius: 0%;
     transition: border-radius 3s;
 }
@@ -140,57 +138,7 @@ ul .nav-item a:hover{
     font-weight: bolder;
     border-radius: 50%;
 }
-/*Media Queries Index*/
-@media only screen and (max-width: 768px) {
-    
-    .padre-fluid{
-          grid-template-areas: 
-          "header header"
-          "nav nav"
-          "main main"
-          "aside aside"
-          "footer footer";
-    }
-    
-}
-    
-@media only screen and (max-width: 480px) {
-    .padre-fluid{
-        
-        grid-template-areas: 
-          "header"
-          "nav"
-          "main"
-          "main"
-          "aside"
-          "aside"
-          "footer"; 
-      }
-    }
 
-/*Media Queries Reservas*/
-@media only screen and (max-width: 768px) { 
-    .padrer-fluid{
-        
-        grid-template-areas:
-        "header"
-        "nav"
-        "main"
-        "aside"
-        "footer";
-    }
-}
-@media only screen and (max-width: 420px) { 
-    .padrer-fluid{
-        
-        grid-template-areas:
-        "header"
-        "nav"
-        "main"
-        "aside"
-        "footer";
-    }
-}
 
 /*Estilos del index*/
 .img{
@@ -203,7 +151,10 @@ text-align: center;
     grid-area: main;
 
  }
- 
+ main .secciones {
+    display: flex;
+ }
+
  main .imagenes{
     display: flex;
     width: 85%;
@@ -262,7 +213,7 @@ text-align: center;
 .alogo{
     text-align: center;
     margin: 30px 20px;
-    padding: 30px 15px;
+    padding: 25px 15px;
     padding-top: 100px;
     width:10vw;
    
@@ -314,7 +265,7 @@ footer .logo img {
 
 footer .map {
     padding: 5px;
-    margin: 5px;
+    
 }
 footer .map iframe {
     width: 180px;
@@ -347,6 +298,14 @@ footer h4{
     background-color: black;
     text-align: center;
 }
+/*Estilo de Staff*/
+main .sfseccion{
+    display: flex;
+    flex-wrap: wrap;
+}
+main .staffpics{
+    width: 20vw;
+}
 /*Estilo de Reservas*/
 
 .col-12{
@@ -362,14 +321,87 @@ footer h4{
     
 }
  /*Estilo de contactos*/
-.botonx{
+ 
+.d-grid{
     text-align: center;
 }
- .boton {
+.d-grid .btn{
+    background-color: #CC9A7C;
+    border: #CC9A7C;
+}
+.d-grid .btn:hover{
+    background-color: #FFC09C;
+}
+
+aside .aimg{
     text-align: center;
+    padding: 5px;
+    margin: 10px;
+}
+aside .aimg img{
+    width: 5vw;
+    padding: 5px;
+}
+
+  
+  /*Media Queries Index*/
+@media only screen and (max-width: 768px) {
     
- }
-  
-  
+    .padre-fluid{
+        grid-template-columns: 1.5fr;
+        grid-template-rows: 0.8fr, 0.8fr, 1.5fr,1fr, 0.6fr;
+          grid-template-areas: 
+          "header"
+          "nav"
+          "main"
+          "aside"
+          "footer";
+    }
+    aside .alogo{
+        text-align: center;
+    }
+    }
+
+
+    
+@media only screen and (max-width: 480px) {
+    .padre-fluid{
+        grid-template-columns: 1.5fr;
+        grid-template-rows: 0.8fr, 0.8fr, 1.5fr, 0.5fr,0.6fr;
+        gap: 0.5;
+        grid-template-areas: 
+          "header"
+          "nav"
+          "main"
+          "main"
+          "aside"
+          "aside"
+          "footer"; 
+      }
+    }
+
+/*Media Queries Reservas*/
+@media only screen and (max-width: 768px) { 
+    .padrer-fluid{
+        grid-template-columns: 1.5fr;
+        grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+    }
+}
+@media only screen and (max-width: 420px) { 
+    .padrer-fluid{
+        
+        grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+    }
+}
   
   
