@@ -1,161 +1,118 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/*Grid del INDEX*/
-.padre-fluid {  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #80604E;
+  font-family: "PT Serif", serif;
+  color: black;
+  font-size: 1rem; }
+  body .padre-fluid {
     display: grid;
     grid-template-columns: 1.5fr 0.5fr;
     grid-template-rows: 0.8fr 0.8fr 1.5fr 1.5fr 0.6fr;
-    
-    grid-template-areas:
-      "header header"
-      "nav  nav"
-      "main aside"
-      "main aside"
-      "footer footer";
-  }
-  /*Grid de INSTALACIONES, STAFF, RESERVAS Y CONTACTOS*/
-  .padrer-fluid {  
-      display: grid;
-        grid-template-columns: 1.5fr 0.5fr;
-        grid-template-rows: 0.3fr 0.3fr 1.5fr 1fr 0.6fr;
-        grid-template-areas:
-          "header header"
-          "nav nav"
-          "main aside"
-          "main aside"
-          "footer footer";
-      }
-      
-  body {
-    background-color: #80604E;
-    color: black;
-    font-family: 'PT Serif', serif;
-    font-size: 1rem;
-}
-h1  {
-    color: #FFC09C;
-    text-align: center;
-    font-family:'Playfair Display SC', serif;;
-    font-size: 2rem;
-    padding: 10;
-    margin: 10px auto;
-}
- h2{
-    font-family:'Playfair Display SC', serif;
-    color: #FFC09C;
-    
-}
- h4 {
-    font-family:'Playfair Display SC', serif ;
-    font-size: 0.9rem;
-}
+    grid-template-areas: "header header" "nav  nav" "main aside" "main aside" "footer footer"; }
+    @media only screen and (max-width: 480px) {
+      body .padre-fluid {
+        grid-template-columns: 1.5fr;
+        grid-template-rows: 0.8fr, 0.8fr, 1.5fr,1fr, 0.6fr;
+        grid-template-areas: "header" "nav" "main" "aside" "footer"; } }
+    @media only screen and (max-width: 768px) {
+      body .padre-fluid {
+        grid-template-columns: 1.5fr;
+        grid-template-rows: 0.8fr, 0.8fr, 1.5fr, 0.5fr,0.6fr;
+        gap: 0.5;
+        grid-template-areas: "header" "nav" "main" "main" "aside" "aside" "footer"; } }
+  body .padrer-fluid {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    grid-template-rows: 0.3fr 0.3fr 1.5fr 1fr 0.6fr;
+    grid-template-areas: "header header" "nav nav" "main aside" "main aside" "footer footer"; }
+    @media only screen and (max-width: 768px) {
+      body .padrer-fluid .padrer-fluid {
+        grid-template-columns: 1.5fr;
+        grid-template-areas: "header" "nav" "main" "aside" "footer"; } }
+    @media only screen and (max-width: 420px) {
+      body .padrer-fluid .padrer-fluid {
+        grid-template-areas: "header" "nav" "main" "aside" "footer"; } }
+
+h1 {
+  color: #FFC09C;
+  font-family: "Playfair Display SC", serif;
+  padding: 10px;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold; }
+
+h2 {
+  color: #FFC09C;
+  font-family: "Playfair Display SC", serif;
+  text-align: center; }
+
 h3 {
-    font-family:'Playfair Display SC', serif  ;
-    font-size:0.9rem ;
-    text-decoration: underline;
-}
+  text-decoration: underline; }
 
+h3, h4 {
+  color: #FFC09C;
+  font-family: "Playfair Display SC", serif;
+  font-size: 0.9rem; }
 
-/*estilos del header*/
-.header { 
-    grid-area: header; 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 10px;
-   
-    
-}
-header .tl{
-    
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px; }
+  header .tl {
     text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; }
+    header .tl .logo {
+      padding-right: 100px; }
+      header .tl .logo img {
+        width: 183px;
+        border-radius: 50%;
+        margin: 30px;
+        padding: 1px 1px;
+        transition: height 2s; }
+        header .tl .logo img:hover {
+          transform: scale(1.5, 1.5); }
 
-}
-header .logo {
-   padding-right: 100px;
-}
-header .logo img {
-    width: 183px;
-    border-radius: 50%;
-    margin: 30px;
-    padding: 1px 1px;
-    transition: height 2s;   
-}
-header .logo img:hover{
-    transform: scale(1.5,1.5)
-}
-header h1{
-    font-size: 5rem;
-    font-weight: bold;
-    
+nav {
+  grid-area: nav;
+  background-color: #CC9A7C;
+  margin: auto 1px; }
+  nav ul {
+    justify-content: space-around;
+    padding: 10px;
+    width: 100%;
+    display: flex; }
+    nav ul .nav-item {
+      position: relative;
+      font-size: 1rem;
+      text-align: center; }
+      nav ul .nav-item a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        border-radius: 0%;
+        transition: border-radius 3s; }
+        nav ul .nav-item a:hover {
+          background-color: #FFC09C;
+          color: #80604E;
+          font-weight: bolder;
+          border-radius: 50%; }
 
-
-}
-/*Estilos del nav*/
- nav{
-    grid-area: nav;
-    background-color: #CC9A7C;
-    margin: auto 1px; 
-    
- }
- nav ul {
-    
-    list-style-type:none;
-        padding: 10px;
-        width: 100%;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-around
-
-}
-ul .nav-item {
-    
-    position: relative;
-    font-size: 1rem;
-    text-align: center;   
-}
-ul .nav-item a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    
-    border-radius: 0%;
-    transition: border-radius 3s;
-}
-
-
-ul .nav-item a:hover{
-    background-color: #FFC09C;
-    color: #80604E;
-    font-weight: bolder;
-    border-radius: 50%;
-}
-
-
-/*Estilos del index*/
-.img{
-text-align: center;
-  }
-
-
-  /*Estilos del index-main*/
-  .main { 
-    grid-area: main;
-
- }
- main .secciones {
-    display: flex;
- }
-
- main .imagenes{
+main {
+  grid-area: main; }
+  main .secciones .agrandar {
+    margin-top: 10px; }
+  main .imagenes {
     display: flex;
     width: 85%;
     height: 85vh;
@@ -163,245 +120,116 @@ text-align: center;
     scroll-snap-type: x mandatory;
     margin-left: 40px;
     margin-bottom: 5px;
-    background-color: #80604E;
- }
- main .imagenes .imgx{
-  flex: 0 0 100%;
-  width: 100%;
-  object-fit: cover;
-  scroll-snap-align: center;
- }
- main  p{
+    background-color: #80604E; }
+    main .imagenes .imgx {
+      flex: 0 0 100%;
+      width: 100%;
+      object-fit: cover;
+      scroll-snap-align: center; }
+  main .imagenes_i {
+    display: flex;
+    width: 70%;
+    height: 70vh;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    margin-left: 40px;
+    margin-bottom: 5px;
+    background-color: #80604E; }
+    main .imagenes_i .imgx {
+      flex: 0 0 100%;
+      width: 100%;
+      object-fit: cover;
+      scroll-snap-align: center; }
+  main p {
     margin: 20px;
-    font-size: 1.3rem;
- }
- 
- main .seccion2 .agrandar{
-    margin-top: 30px;
- }
- main h2 {
-    text-align: center;
-    
- }
- main  a{
+    font-size: 1.2rem; }
+  main a {
     text-decoration: none;
-    transition: all 2s;
-    color: #FFC09C;
- }
+    transition: all 1s;
+    color: #CC9A7C; }
+    main a:hover {
+      color: #FFC09C; }
+  main h3 {
+    text-align: center; }
+  main .instalaciones h2 {
+    padding: 5px;
+    margin: 2px; }
+  main .ins {
+    margin: 5px; }
+    main .ins h3 {
+      text-align: center;
+      font-size: 1rem; }
 
-  
-/*Estilos del index/reservas-aside*/
-.aside { 
-    grid-area: aside;
-    
-    border-radius: 50px;
-    padding: 15px;
-    margin: 18px;
+.sfseccion {
+  display: flex;
+  flex-wrap: wrap; }
 
- }
-.aside section{
+.card {
+  margin: 15px;
+  padding: 5px;
+  background-color: #CC9A7C;
+  text-align: center; }
+
+aside {
+  grid-area: aside;
+  border-radius: 50px;
+  padding: 15px;
+  margin: 18px; }
+  aside section {
     display: flex;
     flex-direction: column;
     align-content: flex-end;
-    margin: auto;
-}
-.alogo img{
-    width: 15vw;
-    border-radius: 50%;
-    background-color: #CC9A7C;
-}
-.alogo{
-    text-align: center;
-    margin: 30px 20px;
-    padding: 25px 15px;
-    padding-top: 100px;
-    width:10vw;
-   
-}
-
-.atl{
-    text-align: center;
-    margin-top: 1px;
-    margin-bottom: 30px;
-    color: black;
-    text-decoration: underline;
-}
-.texta{
-    background-color: #CC9A7C;
-    border-radius:10%;
-    padding: 10px;
-    line-height: 40px;
-    font-weight: bolder;
-}
-
-/*Estilos del index/reservas-footer*/
+    margin: auto; }
+    aside section .atl {
+      margin-top: 1px;
+      margin-bottom: 30px;
+      color: black;
+      text-decoration: underline; }
+    aside section .texta {
+      background-color: #CC9A7C;
+      border-radius: 10%;
+      padding: 10px;
+      line-height: 40px;
+      font-weight: bolder; }
+    aside section .alogo {
+      text-align: center;
+      margin: 30px 20px;
+      padding: 25px 15px;
+      padding-top: 100px;
+      width: 10vw; }
+      aside section .alogo img {
+        width: 15vw;
+        border-radius: 50%;
+        background-color: #CC9A7C; }
 
 footer {
-    
-    grid-area: footer;
-    background-color: #FFC09C;
-    padding: 16px; 
-    display: flex;
-    justify-content: space-between;
-}
-footer .logo{
+  grid-area: footer;
+  background-color: #FFC09C;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between; }
+  footer .logo {
     padding: 5px;
-    font-weight: bold;
-}
-footer .menu{
+    font-weight: bold; }
+    footer .logo img {
+      width: 30px;
+      padding-right: 5px; }
+  footer .menu {
     list-style-type: none;
     text-align: center;
-    padding: 5px;
-}
-footer .menu li a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-footer .logo img {
-    width: 30px;
-    padding-right: 5px;
-}
+    padding: 5px; }
+    footer .menu a {
+      text-decoration: none;
+      color: black;
+      font-weight: bolder; }
+  footer .map {
+    padding: 15px; }
+    footer .map iframe {
+      width: 180px;
+      height: 150px; }
+  footer h3 {
+    color: black; }
 
-footer .map {
-    padding: 5px;
-    
-}
-footer .map iframe {
-    width: 180px;
-    height: 150px;
-}
-footer h4{
-    font-weight: none;
-}
-
- /*Estilos de instalacions*/
- nav .menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: center
-    x;
-    list-style-type: none;
-
- }
- .ins {
-    text-decoration: none;
-    color: #FFC09C;
-    font-size: 1.5rem;
-    margin: 20px;
-    text-align: center;
-}
-.instalaciones {
-    position: fixed;
-    margin: 10px auto;
-    padding: 15px;
-    background-color: black;
-    text-align: center;
-}
-/*Estilo de Staff*/
-main .sfseccion{
-    display: flex;
-    flex-wrap: wrap;
-}
-main .staffpics{
-    width: 20vw;
-}
-/*Estilo de Reservas*/
-
-.col-12{
-    text-align: center;
-
-}
-.col-12 button{
-    background-color: #CC9A7C;
-    border: none;
-}
-.col-12 button:hover{
-    background-color: #FFC09C;
-    
-}
- /*Estilo de contactos*/
- 
-.d-grid{
-    text-align: center;
-}
-.d-grid .btn{
-    background-color: #CC9A7C;
-    border: #CC9A7C;
-}
-.d-grid .btn:hover{
-    background-color: #FFC09C;
-}
-
-aside .aimg{
-    text-align: center;
-    padding: 5px;
-    margin: 10px;
-}
-aside .aimg img{
-    width: 5vw;
-    padding: 5px;
-}
-
-  
-  /*Media Queries Index*/
-@media only screen and (max-width: 768px) {
-    
-    .padre-fluid{
-        grid-template-columns: 1.5fr;
-        grid-template-rows: 0.8fr, 0.8fr, 1.5fr,1fr, 0.6fr;
-          grid-template-areas: 
-          "header"
-          "nav"
-          "main"
-          "aside"
-          "footer";
-    }
-    aside .alogo{
-        text-align: center;
-    }
-    }
-
-
-    
-@media only screen and (max-width: 480px) {
-    .padre-fluid{
-        grid-template-columns: 1.5fr;
-        grid-template-rows: 0.8fr, 0.8fr, 1.5fr, 0.5fr,0.6fr;
-        gap: 0.5;
-        grid-template-areas: 
-          "header"
-          "nav"
-          "main"
-          "main"
-          "aside"
-          "aside"
-          "footer"; 
-      }
-    }
-
-/*Media Queries Reservas*/
-@media only screen and (max-width: 768px) { 
-    .padrer-fluid{
-        grid-template-columns: 1.5fr;
-        grid-template-areas:
-        "header"
-        "nav"
-        "main"
-        "aside"
-        "footer";
-    }
-}
-@media only screen and (max-width: 420px) { 
-    .padrer-fluid{
-        
-        grid-template-areas:
-        "header"
-        "nav"
-        "main"
-        "aside"
-        "footer";
-    }
-}
-  
-  
+/*Estilos instalaciones*/
+.aside .alogo {
+  text-align: end; }

@@ -1,0 +1,143 @@
+$violeta: #80604E;
+$letra_texto: 'PT Serif', serif;
+$letra_titulo: 'Playfair Display SC', serif;;
+$color_titulo: #FFC09C;
+$rosa: #CC9A7C;
+$color_letra: black;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin headlines {
+    color: $color_titulo;
+    font-family: $letra_titulo;
+}
+@mixin grid {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    grid-template-rows: 0.8fr 0.8fr 1.5fr 1.5fr 0.6fr;
+    grid-template-areas:
+      "header header"
+      "nav  nav"
+      "main aside"
+      "main aside"
+      "footer footer";
+     
+}
+
+@mixin grids {
+        display: grid;
+          grid-template-columns: 1.5fr 0.5fr;
+          grid-template-rows: 0.3fr 0.3fr 1.5fr 1fr 0.6fr;
+          grid-template-areas:
+            "header header"
+            "nav nav"
+            "main aside"
+            "main aside"
+            "footer footer";
+}
+@mixin mvp {
+    @media only screen and (max-width: 768px){
+    grid-template-columns: 1.5fr;
+        grid-template-rows: 0.8fr, 0.8fr, 1.5fr, 0.5fr,0.6fr;
+        gap: 0.5;
+        grid-template-areas: 
+          "header"
+          "nav"
+          "main"
+          "main"
+          "aside"
+          "aside"
+          "footer"
+    }
+}
+@mixin mqp {
+    @media only screen and (max-width: 480px) {
+    grid-template-columns: 1.5fr;
+        grid-template-rows: 0.8fr, 0.8fr, 1.5fr,1fr, 0.6fr;
+          grid-template-areas: 
+          "header"
+          "nav"
+          "main"
+          "aside"
+          "footer";
+    } 
+}
+@mixin mvpg{
+    @media only screen and (max-width: 768px) { 
+        .padrer-fluid{
+            grid-template-columns: 1.5fr;
+            grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+        }
+    }
+}
+@mixin mqpg{
+    @media only screen and (max-width: 420px) { 
+        .padrer-fluid{
+            
+            grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+        }
+    }
+}
+body{
+    background-color: $violeta;
+    font-family: $letra_texto;
+    color: $color_letra;
+    font-size: 1rem;
+    .padre-fluid{
+        @include grid();
+        @include mqp();
+        @include mvp();
+    }
+    .padrer-fluid{
+        @include grids();
+        @include mvpg();
+        @include mqpg();
+    }
+    }
+    h1{
+        @include headlines();
+        padding: 10px;
+        margin:10px auto;
+        text-align: center;
+        font-size: 5rem;
+        font-weight: bold;
+    }
+    h2{
+        @include headlines();
+        text-align: center;
+    }
+    h3{
+        text-decoration: underline;
+    }
+    h3, h4{
+        @include headlines();
+        font-size:0.9rem;  
+     }
+
+
+@import "header";
+@import "nav";
+@import "main";
+@import "aside";
+@import "footer";
+
+/*Estilos instalaciones*/
+.aside{
+    .alogo{
+        text-align: end;
+    }
+}

@@ -1,0 +1,80 @@
+main{
+    grid-area: main;
+    .secciones{
+        
+        .agrandar{
+            margin-top: 10px;
+        }
+    }
+    .imagenes{
+        display: flex;
+        width: 85%;
+        height: 85vh;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        margin-left: 40px;
+        margin-bottom: 5px;
+        background-color: $violeta;
+     .imgx{
+        flex: 0 0 100%;
+        width: 100%;
+        object-fit: cover;
+        scroll-snap-align: center;
+     }
+    }
+    .imagenes_i{
+        display: flex;
+        width: 70%;
+        height: 70vh;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        margin-left: 40px;
+        margin-bottom: 5px;
+        background-color: $violeta;
+        .imgx{
+            flex: 0 0 100%;
+            width: 100%;
+            object-fit: cover;
+            scroll-snap-align: center;
+        }
+    }
+    p{
+        margin: 20px;
+        font-size: 1.2rem;
+    }
+    a{
+        text-decoration: none;
+        transition: all 1s;
+        color: $rosa;
+        &:hover{
+            color: $color_titulo;
+        }
+    }
+    h3{
+        text-align: center;
+
+    }
+    .instalaciones{
+        h2{
+            padding: 5px;
+            margin: 2px;
+        }
+    }
+    .ins{
+        h3{
+            text-align: center;
+            font-size: 1rem;
+        }
+        margin: 5px;
+    }
+}
+.sfseccion{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    margin: 15px;
+    padding: 5px;
+    background-color:$rosa ;
+    text-align: center;
+}
