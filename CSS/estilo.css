@@ -159,16 +159,28 @@ main {
     main .ins h3 {
       text-align: center;
       font-size: 1rem; }
-
-.sfseccion {
-  display: flex;
-  flex-wrap: wrap; }
-
-.card {
-  margin: 15px;
-  padding: 5px;
-  background-color: #CC9A7C;
-  text-align: center; }
+  main .sfseccion {
+    display: flex;
+    flex-wrap: wrap; }
+  main .card {
+    margin: 15px;
+    padding: 5px;
+    background-color: #CC9A7C;
+    text-align: center; }
+  main .col-12 {
+    text-align: center; }
+    main .col-12 .btn {
+      background-color: #CC9A7C;
+      border: #CC9A7C; }
+      main .col-12 .btn:hover {
+        background-color: #FFC09C; }
+  main .d-grid {
+    text-align: center; }
+    main .d-grid .btn {
+      background-color: #CC9A7C;
+      border: #CC9A7C; }
+      main .d-grid .btn:hover {
+        background-color: #FFC09C; }
 
 aside {
   grid-area: aside;
@@ -201,6 +213,23 @@ aside {
         width: 15vw;
         border-radius: 50%;
         background-color: #CC9A7C; }
+  aside .contactanos {
+    text-align: center;
+    padding: 5px; }
+    aside .contactanos section .aimg {
+      padding: 5px; }
+      aside .contactanos section .aimg img {
+        width: 20%; }
+  aside .alogo {
+    text-align: center;
+    margin: 30px 20px;
+    padding: 25px 15px;
+    padding-top: 100px;
+    width: 10vw; }
+    aside .alogo img {
+      width: 15vw;
+      border-radius: 50%;
+      background-color: #CC9A7C; }
 
 footer {
   grid-area: footer;

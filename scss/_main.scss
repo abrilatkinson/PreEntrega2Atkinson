@@ -1,4 +1,15 @@
 main{
+    @mixin btn {
+        text-align: center;
+    .btn{
+        background-color: $rosa;
+        border: $rosa;
+        &:hover{
+            background-color: $color_titulo;
+        }
+        
+    }
+    }
     grid-area: main;
     .secciones{
         
@@ -67,7 +78,6 @@ main{
         }
         margin: 5px;
     }
-}
 .sfseccion{
     display: flex;
     flex-wrap: wrap;
@@ -77,4 +87,12 @@ main{
     padding: 5px;
     background-color:$rosa ;
     text-align: center;
+}
+.col-12{
+    @include btn();
+}
+.d-grid{
+    @include btn();
+}
+
 }

@@ -1,4 +1,16 @@
 aside{
+    @mixin logoh {
+        text-align: center;
+            margin: 30px 20px;
+            padding: 25px 15px;
+            padding-top: 100px;
+            width: 10vw;
+    }
+    @mixin img_logo {
+             width: 15vw;
+                border-radius: 50%;
+                background-color: $rosa;
+    }
     grid-area: aside;
     border-radius: 50px;
     padding: 15px;
@@ -22,16 +34,29 @@ aside{
             font-weight: bolder;
         }
         .alogo{
-            text-align: center;
-            margin: 30px 20px;
-            padding: 25px 15px;
-            padding-top: 100px;
-            width: 10vw;
+            @include logoh();
             img{
-                width: 15vw;
-                border-radius: 50%;
-                background-color: $rosa;
+                @include img_logo();
             }
         }
     }
+    .contactanos{
+        text-align: center;
+        padding: 5px;
+        section{
+            .aimg{
+                padding: 5px;
+                img{
+                    width: 20%;
+                }
+            }
+        }
+    }
+    .alogo{
+        @include logoh();
+        img{
+            @include img_logo();
+        }
+    }
+
 }
