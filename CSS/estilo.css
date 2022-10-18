@@ -13,29 +13,75 @@ body {
     grid-template-columns: 1.5fr 0.5fr;
     grid-template-rows: 0.8fr 0.8fr 1.5fr 1.5fr 0.6fr;
     grid-template-areas: "header header" "nav  nav" "main aside" "main aside" "footer footer"; }
-    @media only screen and (max-width: 480px) {
+    @media screen and (max-width: 768px) {
       body .padre-fluid {
         grid-template-columns: 1.5fr;
-        grid-template-rows: 0.8fr, 0.8fr, 1.5fr,1fr, 0.6fr;
-        grid-template-areas: "header" "nav" "main" "aside" "footer"; } }
-    @media only screen and (max-width: 768px) {
+        grid-template-rows: 0.8fr 0.8fr 1.5fr  1fr  0.6fr;
+        grid-template-areas: "header" "nav" "main" "aside" "footer"; }
+        body .padre-fluid .header .tl {
+          display: block;
+          text-align: center; }
+          body .padre-fluid .header .tl .logo {
+            text-align: center;
+            padding: 0%; }
+        body .padre-fluid .footer {
+          display: block;
+          text-align: center; }
+          body .padre-fluid .footer .map {
+            margin-bottom: auto; } }
+    @media screen and (max-width: 480px) {
       body .padre-fluid {
-        grid-template-columns: 1.5fr;
-        grid-template-rows: 0.8fr, 0.8fr, 1.5fr, 0.5fr,0.6fr;
-        gap: 0.5;
-        grid-template-areas: "header" "nav" "main" "main" "aside" "aside" "footer"; } }
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat();
+        grid-template-areas: "header" "nav" "main" "aside" "footer"; }
+        body .padre-fluid .header .tl {
+          display: block;
+          text-align: center; }
+          body .padre-fluid .header .tl .logo {
+            text-align: center;
+            padding: 0%; }
+        body .padre-fluid .footer {
+          display: block;
+          text-align: center; }
+          body .padre-fluid .footer .map {
+            margin-bottom: auto; } }
   body .padrer-fluid {
     display: grid;
     grid-template-columns: 1.5fr 0.5fr;
     grid-template-rows: 0.3fr 0.3fr 1.5fr 1fr 0.6fr;
     grid-template-areas: "header header" "nav nav" "main aside" "main aside" "footer footer"; }
-    @media only screen and (max-width: 768px) {
-      body .padrer-fluid .padrer-fluid {
+    @media screen and (max-width: 768px) {
+      body .padrer-fluid {
         grid-template-columns: 1.5fr;
-        grid-template-areas: "header" "nav" "main" "aside" "footer"; } }
-    @media only screen and (max-width: 420px) {
-      body .padrer-fluid .padrer-fluid {
-        grid-template-areas: "header" "nav" "main" "aside" "footer"; } }
+        grid-template-rows: 0.8fr 0.8fr 1.5fr  1fr  0.6fr;
+        grid-template-areas: "header" "nav" "main" "aside" "footer"; }
+        body .padrer-fluid .header .tl {
+          display: block;
+          text-align: center; }
+          body .padrer-fluid .header .tl .logo {
+            text-align: center;
+            padding: 0%; }
+        body .padrer-fluid .footer {
+          display: block;
+          text-align: center; }
+          body .padrer-fluid .footer .map {
+            margin-bottom: auto; } }
+    @media screen and (max-width: 480px) {
+      body .padrer-fluid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat();
+        grid-template-areas: "header" "nav" "main" "aside" "footer"; }
+        body .padrer-fluid .header .tl {
+          display: block;
+          text-align: center; }
+          body .padrer-fluid .header .tl .logo {
+            text-align: center;
+            padding: 0%; }
+        body .padrer-fluid .footer {
+          display: block;
+          text-align: center; }
+          body .padrer-fluid .footer .map {
+            margin-bottom: auto; } }
 
 h1 {
   color: #FFC09C;
@@ -89,7 +135,7 @@ nav {
   nav ul {
     justify-content: space-around;
     padding: 10px;
-    width: 100%;
+    width: 95vw;
     display: flex; }
     nav ul .nav-item {
       position: relative;
@@ -123,7 +169,7 @@ main {
     background-color: #80604E; }
     main .imagenes .imgx {
       flex: 0 0 100%;
-      width: 100%;
+      width: 85%;
       object-fit: cover;
       scroll-snap-align: center; }
   main .imagenes_i {
