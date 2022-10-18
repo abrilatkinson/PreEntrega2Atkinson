@@ -82,7 +82,7 @@ $color_letra: black;
 @mixin mqpg{
     @media only screen and (max-width: 420px) { 
         .padrer-fluid{
-            
+            grid-template-columns: 1.5fr;
             grid-template-areas:
             "header"
             "nav"
