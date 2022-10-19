@@ -69,7 +69,7 @@ body {
     @media screen and (max-width: 480px) {
       body .padrer-fluid {
         grid-template-columns: 1fr;
-        grid-template-rows: 0.5fr, 0.5fr, 0.5fr, 0.5fr, 0.5fr;
+        grid-template-rows: 0.3fr 0.1fr 0.3fr 0.3fr 0.3fr;
         grid-template-areas: "header" "nav" "main" "aside" "footer"; }
         body .padrer-fluid .header .tl {
           display: block;
@@ -79,9 +79,7 @@ body {
             padding: 0%; }
         body .padrer-fluid .footer {
           display: block;
-          text-align: center; }
-          body .padrer-fluid .footer .map {
-            margin-bottom: auto; } }
+          text-align: center; } }
 
 h1 {
   color: #FFC09C;

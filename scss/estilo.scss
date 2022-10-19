@@ -128,14 +128,13 @@ $color_letra: black;
     }
     @media screen and(max-width:480px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 0.5fr, 0.5fr, 0.5fr, 0.5fr, 0.5fr;
+        grid-template-rows: 0.3fr 0.1fr 0.3fr 0.3fr 0.3fr; 
         grid-template-areas: 
         "header"
         "nav"
         "main"
         "aside"
         "footer";
-
         .header{
             .tl{
                 display: block;
@@ -146,12 +145,10 @@ $color_letra: black;
                 }
             }
         }
+        
         .footer{
             display:block;
             text-align: center;
-            .map{
-                margin-bottom: auto;
-            }
         }
     }
         
