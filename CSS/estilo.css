@@ -69,7 +69,7 @@ body {
     @media screen and (max-width: 480px) {
       body .padrer-fluid {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat();
+        grid-template-rows: 0.5fr, 0.5fr, 0.5fr, 0.5fr, 0.5fr;
         grid-template-areas: "header" "nav" "main" "aside" "footer"; }
         body .padrer-fluid .header .tl {
           display: block;
@@ -170,20 +170,6 @@ main {
     main .imagenes .imgx {
       flex: 0 0 100%;
       width: 85%;
-      object-fit: cover;
-      scroll-snap-align: center; }
-  main .imagenes_i {
-    display: flex;
-    width: 70%;
-    height: 70vh;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    margin-left: 40px;
-    margin-bottom: 5px;
-    background-color: #80604E; }
-    main .imagenes_i .imgx {
-      flex: 0 0 100%;
-      width: 100%;
       object-fit: cover;
       scroll-snap-align: center; }
   main p {
