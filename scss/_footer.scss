@@ -7,6 +7,13 @@ footer{
     .logo{
         padding: 5px;
         font-weight: bold;
+        a{
+            text-decoration: none;
+            color: $color_letra;
+            &:hover{
+                color: $violeta;
+            }
+        }
         img{
             width: 30px;
             padding-right: 5px;
@@ -20,6 +27,9 @@ footer{
             text-decoration: none;
             color: $color_letra;
             font-weight: bolder;
+            &:hover{
+                color: $violeta;
+            }
         }
     }
     .map{

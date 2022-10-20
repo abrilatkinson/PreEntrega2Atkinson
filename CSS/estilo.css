@@ -191,7 +191,8 @@ main {
       font-size: 1rem; }
   main .sfseccion {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    justify-content: center; }
   main .card {
     margin: 15px;
     padding: 5px;
@@ -245,11 +246,18 @@ aside {
         background-color: #CC9A7C; }
   aside .contactanos {
     text-align: center;
-    padding: 5px; }
+    padding: 10px; }
     aside .contactanos section .aimg {
       padding: 5px; }
+      aside .contactanos section .aimg a {
+        text-decoration: none;
+        color: #CC9A7C; }
+        aside .contactanos section .aimg a:hover {
+          color: #FFC09C; }
       aside .contactanos section .aimg img {
         width: 20%; }
+    aside .contactanos .telefono {
+      color: #CC9A7C; }
   aside .alogo {
     text-align: center;
     margin: 30px 20px;
@@ -270,6 +278,11 @@ footer {
   footer .logo {
     padding: 5px;
     font-weight: bold; }
+    footer .logo a {
+      text-decoration: none;
+      color: black; }
+      footer .logo a:hover {
+        color: #80604E; }
     footer .logo img {
       width: 30px;
       padding-right: 5px; }
@@ -281,6 +294,8 @@ footer {
       text-decoration: none;
       color: black;
       font-weight: bolder; }
+      footer .menu a:hover {
+        color: #80604E; }
   footer .map {
     padding: 15px; }
     footer .map iframe {

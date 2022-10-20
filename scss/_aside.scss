@@ -42,14 +42,24 @@ aside{
     }
     .contactanos{
         text-align: center;
-        padding: 5px;
+        padding: 10px;
         section{
             .aimg{
                 padding: 5px;
+                a{
+                    text-decoration: none;
+                    color: $rosa;
+                    &:hover{
+                        color:$color_titulo ;
+                    }
+                }
                 img{
                     width: 20%;
                 }
             }
+        }
+        .telefono{
+            color: $rosa;
         }
     }
     .alogo{

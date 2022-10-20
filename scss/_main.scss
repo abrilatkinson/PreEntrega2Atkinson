@@ -66,12 +66,14 @@ main{
 .sfseccion{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .card{
     margin: 15px;
     padding: 5px;
     background-color:$rosa ;
     text-align: center;
+    
 }
 .col-12{
     @include btn();
