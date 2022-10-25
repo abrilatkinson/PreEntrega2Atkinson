@@ -175,6 +175,11 @@ main {
       width: 75%;
       object-fit: cover;
       scroll-snap-align: center; }
+  main .buffet {
+    margin: 20px;
+    text-align: center; }
+    main .buffet img {
+      width: 75%; }
   main p {
     margin: 20px;
     font-size: 1.2rem; }

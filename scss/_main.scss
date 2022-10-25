@@ -19,6 +19,7 @@ main{
             width: 25%;
             height: 25%;
         }
+
     }
     .secciones{
         .agrandar{
@@ -41,7 +42,13 @@ main{
         scroll-snap-align: center;
      }
     }
-    
+    .buffet{
+        margin: 20px;
+        text-align: center;
+        img{
+            width: 75%;
+        }
+    }
     p{
         margin: 20px;
         font-size: 1.2rem;
