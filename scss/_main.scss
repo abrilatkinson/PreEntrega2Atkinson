@@ -11,24 +11,32 @@ main{
     }
     }
     grid-area: main;
+    .pic{
+        text-align: center;
+        margin-bottom: 5px;
+
+        img{
+            width: 25%;
+            height: 25%;
+        }
+    }
     .secciones{
-        
         .agrandar{
             margin-top: 10px;
         }
     }
+
     .imagenes{
         display: flex;
-        width: 85%;
-        height: 85vh;
+        width: 90%;
+        height: 90vh;
+        margin-left: 15px;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
-        margin-left: 40px;
-        margin-bottom: 5px;
         background-color: $violeta;
      .imgx{
         flex: 0 0 100%;
-        width: 85%;
+        width: 75%;
         object-fit: cover;
         scroll-snap-align: center;
      }
